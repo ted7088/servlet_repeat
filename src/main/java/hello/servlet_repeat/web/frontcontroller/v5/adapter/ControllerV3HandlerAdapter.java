@@ -15,7 +15,7 @@ import java.util.Map;
 import static org.apache.taglibs.standard.lang.jstl.ImplicitObjects.createParamMap;
 
 
-public class ControllerV3HandlerAdapter implements MyHandlerAdapter {
+public class ControllerV3HandlerAdapter implements MyHandlerAdapter {  //핸들러를 통해 다양성 개발
     @Override
     public boolean supports(Object handler) {
         return (handler instanceof ControllerV3);
