@@ -28,7 +28,7 @@ public class FrontControllerServletV5 extends HttpServlet {
     private void initHandlerMappingMap() {
         handlerMappingMap.put("/front-controller/v5/v3/members/new-form", new MemberFormControllerV3());
         handlerMappingMap.put("/front-controller/v5/v3/members/save", new MemberSaveControllerV3());
-        handlerMappingMap.put("/front-controller/v5/v3/members", new MemberListControllerV3());
+        handlerMappingMap.put("/front-controller/v5/v3/members", new MemberListControllerV3());//핸들러 매핑
     }
     private void initHandlerAdapters() {
         handlerAdapters.add(new ControllerV3HandlerAdapter());
