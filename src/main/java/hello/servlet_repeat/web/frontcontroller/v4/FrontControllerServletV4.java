@@ -30,13 +30,13 @@ public class FrontControllerServletV4 extends HttpServlet {
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
             return;
         }
-        Map<String, String> paramMap = createParamMap(request);
+        Map<String, String> paramMap =  createParamMap(request);
         Map<String, Object> model = new HashMap<>(); //추가
         String viewName = controller.process(paramMap, model);
         MyView view = viewResolver(viewName);
         view.render(model, request, response);
     }
-    private Map<String, String> createParamMap(HttpServletRequest request) {
+    private Map<String, String> createParamMap(HttpServletRequest request) {  //요청된 파라미터들을 맵에다 담아줌
         Map<String, String> paramMap = new HashMap<>();
         request.getParameterNames().asIterator()
                 .forEachRemaining(paramName -> paramMap.put(paramName,
